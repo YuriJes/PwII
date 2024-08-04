@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paikan Tech Signup</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .signup-container {
+            border-radius: 16px;
+            background-color: #fff;
+            box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .signup-content {
+            display: flex;
+            gap: 20px;
+        }
+
+        .welcome-column {
+            flex: 0 0 42%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .welcome-content {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            aspect-ratio: 0.577;
+            align-items: center;
+            color: #f8bd71;
+            padding: 132px 29px;
+            font-weight: 900;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .welcome-image {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .welcome-text {
+            position: relative;
+            line-height: 2;
+            margin: 0;
+        }
+
+        .company-name {
+            position: relative;
+            font-size: 32px;
+            line-height: 1;
+            letter-spacing: -0.43px;
+            margin-top: 20px;
+        }
+
+        .login-prompt {
+            position: relative;
+            font-size: 16px;
+            line-height: 2;
+            margin-top: 39px;
+        }
+
+        .login-button {
+            position: relative;
+            border-radius: 30px;
+            background-color: #fff;
+            margin-top: 98px;
+            padding: 28px 70px;
+            font-weight: 900;
+            font-size: 24px;
+            color: #f8bd71;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: #f8bd71;
+            color: #fff;
+        }
+
+        .signup-column {
+            flex: 0 0 58%;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            color: #888;
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        .signup-title {
+            color: #f8bd71;
+            font-size: 24px;
+            line-height: 2;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .signup-subtitle {
+            color: #7d7d7d;
+            font-size: 20px;
+            line-height: 30px;
+            margin-top: 28px;
+            text-align: center;
+        }
+
+        .input-container {
+            background-color: #dfdfdf;
+            display: flex;
+            align-items: center;
+            margin-top: 56px;
+            padding: 20px 12px;
+            border-radius: 5px;
+        }
+
+        .input-icon {
+            width: 34px;
+            height: 34px;
+            margin-right: 20px;
+        }
+
+        .input-field {
+            flex-grow: 1;
+            border: none;
+            background: transparent;
+            font-size: 16px;
+            font-weight: 900;
+            color: #888;
+        }
+
+        .input-field::placeholder {
+            color: #888;
+        }
+
+        .signup-button {
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+            background-color: #0ea98d;
+            align-self: center;
+            margin-top: 19px;
+            width: 244px;
+            font-size: 24px;
+            color: #f8bd71;
+            padding: 22px 0;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .signup-button:hover {
+            background-color: #0c8b74;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        @media (max-width: 991px) {
+            .signup-container {
+                padding: 20px;
+            }
+
+            .signup-content {
+                flex-direction: column;
+            }
+
+            .welcome-column,
+            .signup-column {
+                flex: 0 0 100%;
+            }
+
+            .welcome-content {
+                padding: 100px 20px;
+            }
+
+            .login-button {
+                margin-top: 40px;
+                padding: 20px 50px;
+            }
+
+            .input-container {
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="signup-container">
+        <div class="signup-content">
+            <div class="welcome-column">
+                <div class="welcome-content">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/36d6f562c692e7fffa2746201016fbd39f1c39118f57b722f33fb9ba145abf37?apiKey=6d65331d59474a06ad42ad564ba99caa&&apiKey=6d65331d59474a06ad42ad564ba99caa" alt="" class="welcome-image" />
+                    <h2 class="welcome-text">Bem-Vindo a</h2>
+                    <h1 class="company-name">Paikan Tech!</h1>
+                    <p class="login-prompt">Acesse sua conta agora mesmo</p>
+                   
+                </div>
+            </div>
+            <div class="signup-column">
+                <form class="signup-form">
+                    <h2 class="signup-title">Logue com seus dados</h2>
+                    <p class="signup-subtitle"></p>
+                   
+                    <div class="input-container">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e1f5f81e570d89b90dc032cce2335383ce0acbc4b295fd20637e0a0205385df?apiKey=6d65331d59474a06ad42ad564ba99caa&&apiKey=6d65331d59474a06ad42ad564ba99caa" alt="" class="input-icon" />
+                        <label for="email-input" class="visually-hidden">EMAIL</label>
+                        <input type="email" id="email-input" class="input-field" placeholder="EMAIL" aria-label="EMAIL" required />
+                    </div>
+                    <div class="input-container">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/053bd547350f8190f88ffad0c647e54c395526e9f417827ba6eaeb48eb8e84c0?apiKey=6d65331d59474a06ad42ad564ba99caa&&apiKey=6d65331d59474a06ad42ad564ba99caa" alt="" class="input-icon" />
+                        <label for="password-input" class="visually-hidden">SENHA</label>
+                        <input type="password" id="password-input" class="input-field" placeholder="SENHA" aria-label="SENHA" required />
+                    </div>
+                    <button type="submit" class="signup-button">Logar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
