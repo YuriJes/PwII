@@ -1,0 +1,123 @@
+<style>
+    .receitas-container {
+      display: flex;
+      max-width: 245px;
+      flex-direction: column;
+      align-items: start;
+      color: #888;
+      font: 900 16px/2 Poppins, sans-serif;
+    }
+    
+    .receitas-title {
+      color: #f8bd71;
+      font-size: 20px;
+      line-height: 2.5;
+      align-self: center;
+      z-index: 10;
+      margin-top: -15px;
+    }
+    
+    .form-group {
+      display: flex;
+      margin-top: 30px;
+      white-space: nowrap;
+    }
+    
+    .input-wrapper {
+      display: flex;
+      margin-right: -240px;
+      flex-direction: column;
+    }
+    
+    .input-field {
+      background-color: #dfdfdf;
+      overflow: hidden;
+      padding: 10px 26px 21px;
+      border: 1px solid #fff;
+    }
+    
+    .valor-field {
+      margin-top: 15px;
+      padding: 9px 173px 29px 21px;
+    }
+    
+    .additional-fields {
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .date-field {
+      margin-top: 16px;
+      padding: 10px 39px 23px 26px;
+    }
+    
+    .category-field {
+      margin-top: 15px;
+      padding: 9px 136px 22px 21px;
+    }
+    
+    .employee-field {
+      width: 100%;
+      margin-top: 16px;
+      line-height: 30px;
+      padding: 10px 23px 25px;
+    }
+    
+    .submit-button {
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 30px;
+      background-color: #0ea98d;
+      align-self: stretch;
+      margin-top: 50px;
+      width: 100%;
+      overflow: hidden;
+      font-size: 24px;
+      color: #f8bd71;
+      line-height: 30px;
+      padding: 21px 70px;
+      border: 3px solid transparent;
+      cursor: pointer;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    </style>
+    <center>
+    <section class="receitas-container">
+      <h2 class="receitas-title">Receitas</h2>
+      <form>
+        <div class="form-group">
+          <div class="input-wrapper">
+            <label for="descricao" class="visually-hidden">Descrição</label>
+            <input id="descricao" class="input-field" type="text" placeholder="Descrição" aria-label="Descrição">
+            
+            <label for="valor" class="visually-hidden">Valor</label>
+            <input id="valor" class="input-field valor-field" type="text" placeholder="Valor" aria-label="Valor">
+          </div>
+        </div>
+        
+        <div class="additional-fields">
+          <label for="data-lancamento" class="visually-hidden">Data de lançamento</label>
+          <input id="data-lancamento" class="input-field date-field" type="date" aria-label="Data de lançamento">
+          
+          <label for="categoria" class="visually-hidden">Categoria</label>
+          <input id="categoria" class="input-field category-field" type="text" placeholder="Categoria" aria-label="Categoria">
+          
+          <label for="funcionario" class="visually-hidden">Funcionário</label>
+          <input id="funcionario" class="input-field employee-field" type="text" placeholder="Funcionário" aria-label="Funcionário">
+        </div>
+        
+        <button type="submit" class="submit-button">Enviar</button>
+    </center>
+      </form>
+    </section>
