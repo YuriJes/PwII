@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paikan Tech Signup</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #eaeaea;
+        }
+
+        .signup-container {
+            border-radius: 16px;
+            background-color: #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .corner-image {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 150px;
+            opacity: 0.1;
+        }
+
+        .signup-content {
+            display: flex;
+            gap: 30px;
+        }
+
+        .welcome-column {
+            flex: 0 0 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .welcome-text {
+            color: #f8bd71;
+            font-weight: bold;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .company-name {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .signup-column {
+            flex: 0 0 55%;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            color: #444;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .signup-title {
+            color: #f8bd71;
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .signup-subtitle {
+            color: #777;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .input-field {
+            flex-grow: 1;
+            border: none;
+            background: transparent;
+            font-size: 16px;
+            color: #555;
+            padding: 5px;
+        }
+
+        .input-field::placeholder {
+            color: #aaa;
+        }
+
+        .signup-button {
+            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 30px;
+            background-color: #0ea98d;
+            color: #fff;
+            padding: 15px 0;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .signup-button:hover {
+            background-color: #f8bd71;
+        }
+
+        @media (max-width: 768px) {
+            .signup-container {
+                padding: 20px;
+            }
+
+            .signup-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .welcome-column,
+            .signup-column {
+                flex: 0 0 100%;
+            }
+
+            .signup-title {
+                font-size: 24px;
+            }
+
+            .signup-subtitle {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="signup-container">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a78eccb3ff736b132c021d42e2fae39c8d60a74e8ddbb6bab34e8326211dc271?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="corner-image" alt="Company logo">
+
+        <div class="signup-content">
+            <div class="welcome-column">
+                <h2 class="welcome-text">Bem-Vindo a</h2>
+                <h1 class="company-name">Paikan Tech!</h1>
+            </div>
+            <div class="signup-column">
+                <form class="signup-form">
+                    <h2 class="signup-title">Acesse sua conta</h2>
+                    <p class="signup-subtitle">Informe seus dados</p>
+                    <div class="input-container">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f209cf63f9061366e8145844ee7abcfd54be37f0ed36bb6278a8b49d3bb0e8c5?apiKey=6d65331d59474a06ad42ad564ba99caa" alt="Cargo/Função" class="input-icon" />
+                        <input type="text" id="name-input" class="input-field" placeholder="Cargo/Função" required />
+                    </div>
+                    <div class="input-container">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e1f5f81e570d89b90dc032cce2335383ce0acbc4b295fd20637e0a0205385df?apiKey=6d65331d59474a06ad42ad564ba99caa" alt="Login" class="input-icon" />
+                        <input type="email" id="email-input" class="input-field" placeholder="Login" required />
+                    </div>
+                    <div class="input-container">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/053bd547350f8190f88ffad0c647e54c395526e9f417827ba6eaeb48eb8e84c0?apiKey=6d65331d59474a06ad42ad564ba99caa" alt="Senha" class="input-icon" />
+                        <input type="password" id="password-input" class="input-field" placeholder="Senha" required />
+                    </div>
+                    <button type="submit" class="signup-button">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

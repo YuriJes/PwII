@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paikan Tech Signup</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .signup-container {
+            border-radius: 16px;
+            background-color: #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative; /* Adicionado para posicionar a logo */
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 120px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+        }
+
+        .signup-content {
+            display: flex;
+            gap: 20px;
+        }
+
+        .welcome-column {
+            flex: 0 0 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .welcome-content {
+            position: relative;
+            text-align: center;
+            color: #f8bd71;
+        }
+
+        .welcome-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            opacity: 0.1;
+        }
+
+        .welcome-text {
+            font-weight: bold;
+            font-size: 26px;
+            margin: 0;
+        }
+
+        .company-name {
+            font-size: 32px;
+            line-height: 1.2;
+            margin-top: 10px;
+        }
+
+        .login-prompt {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .signup-column {
+            flex: 0 0 55%;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .signup-title {
+            color: #f8bd71;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .signup-subtitle {
+            color: #7d7d7d;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .input-field {
+            flex-grow: 1;
+            border: none;
+            background: transparent;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .input-field::placeholder {
+            color: #aaa;
+        }
+
+        .signup-button {
+            border-radius: 30px;
+            background-color: #0ea98d;
+            color: #fff;
+            padding: 15px 0;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .signup-button:hover {
+            background-color: #0c8b74;
+        }
+
+        @media (max-width: 991px) {
+            .signup-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .welcome-column,
+            .signup-column {
+                flex: 0 0 100%;
+            }
+
+            .welcome-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="signup-container">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a78eccb3ff736b132c021d42e2fae39c8d60a74e8ddbb6bab34e8326211dc271?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="logo" alt="Logo" />
+        
+        <div class="signup-content">
+            <div class="welcome-column">
+                <div class="welcome-content">
+                    
+                    <h2 class="welcome-text">Bem-Vindo a</h2>
+                    <h1 class="company-name">Paikan Tech!</h1>
+                    <p class="login-prompt">Acesse sua conta agora mesmo</p>
+                </div>
+            </div>
+            <div class="signup-column">
+                <form class="signup-form">
+                    <h2 class="signup-title">Logue com seus dados</h2>
+                    <p class="signup-subtitle">Informe seus dados abaixo:</p>
+                    <div class="input-container">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e1f5f81e570d89b90dc032cce2335383ce0acbc4b295fd20637e0a0205385df?apiKey=6d65331d59474a06ad42ad564ba99caa" alt="" class="input-icon" />
+                        <label for="email-input" class="visually-hidden"></label>
+                        <input type="email" id="email-input" class="input-field" placeholder="EMAIL" aria-label="EMAIL" required />
+                    </div>
+                    <div class="input-container">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/053bd547350f8190f88ffad0c647e54c395526e9f417827ba6eaeb48eb8e84c0?apiKey=6d65331d59474a06ad42ad564ba99caa" alt="" class="input-icon" />
+                        <label for="password-input" class="visually-hidden"></label>
+                        <input type="password" id="password-input" class="input-field" placeholder="SENHA" aria-label="SENHA" required />
+                    </div>
+                    <button type="submit" class="signup-button">Logar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

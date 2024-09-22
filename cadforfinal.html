@@ -1,0 +1,153 @@
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f5;
+    margin: 0;
+    padding: 0;
+  }
+
+  .registration-container {
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    flex-wrap: wrap;
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+  }
+
+  .logo {
+    width: 100px;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+
+  .form-wrapper {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .welcome-text {
+    color: #0ea98d;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .instruction-text {
+    color: #7d7d7d;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .input-container {
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: border-color 0.3s;
+  }
+
+  .input-container:hover {
+    border-color: #0ea98d;
+  }
+
+  .input-icon {
+    width: 28px;
+    margin-right: 12px;
+  }
+
+  .input-field {
+    border: none;
+    background: transparent;
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+  }
+
+  .submit-button {
+    background-color: #0ea98d;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 30px;
+    padding: 12px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 30px auto 0;
+  }
+
+  .submit-button:hover {
+    background-color: #f8bd71;
+  }
+
+  @media (max-width: 768px) {
+    .registration-container {
+      padding: 20px;
+    }
+
+    .input-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .input-field {
+      width: 100%;
+    }
+
+    .submit-button {
+      width: 100%;
+    }
+  }
+</style>
+
+<section class="registration-container">
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a78eccb3ff736b132c021d42e2fae39c8d60a74e8ddbb6bab34e8326211dc271?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="logo" alt="Company logo" />
+
+  <div class="form-wrapper">
+    <h1 class="welcome-text">Seja bem-vindo!</h1>
+    <p class="instruction-text">Para cadastrar sua empresa preencha os dados!</p>
+
+    <form>
+      <div class="input-container">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/51b1f8307adacc1a4fa5e65e880f50b22965208351c21e88c2319a4fde0364d5?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="input-icon" alt="Icone Nome" />
+        <input type="text" id="nome" class="input-field" placeholder="Nome Empresa" aria-label="Nome" required />
+      </div>
+
+      <div class="input-container">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/520a18930d7bc7358b72e2fa6155120cef2c7847764f4843c5200e31f6d3dec7" class="input-icon" alt="Icone Sobrenome" />
+        <input type="text" id="sobrenome" class="input-field" placeholder="Contato" aria-label="Sobrenome" required />
+      </div>
+
+      <div class="input-container">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fd976e426b3925b1d892d669cf52ba868f0df929eb6b5b0605b1de3cd8fa20ed?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="input-icon" alt="Icone Email" />
+        <input type="email" id="email" class="input-field" placeholder="Email" aria-label="Email" required />
+      </div>
+
+      <div class="input-container">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/884e423b7bdc8c1ac3e41d608d09f63018ecbcba0b58ea11975f8ce277a39b02?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="input-icon" alt="Icone Telefone" />
+        <input type="tel" id="telefone" class="input-field" placeholder="Telefone" aria-label="Telefone" required />
+      </div>
+
+      <div class="input-container">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2301b16c44a0324765a00ba02495beab17ce3238379aa7e1f6940168fdca3808?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="input-icon" alt="Icone Endereço" />
+        <input type="text" id="endereco" class="input-field" placeholder="Endereço" aria-label="Endereço" required />
+      </div>
+
+      <button type="submit" class="submit-button">Cadastrar</button>
+    </form>
+  </div>
+</section>

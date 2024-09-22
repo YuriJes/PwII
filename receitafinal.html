@@ -1,0 +1,376 @@
+<style>
+    .receitas-container {
+      border-radius: 16px;
+      background-color: #fff;
+      box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
+      display: flex;
+      max-width: 945px;
+      padding: 0 80px 0 0;
+      gap: 40px 100px;
+      flex-wrap: wrap;
+    }
+    
+    @media (max-width: 991px) {
+      .receitas-container {
+        padding-right: 10px;
+      }
+    }
+    
+    .side-nav-wrapper {
+      display: flex;
+      padding-top: 6px;
+      flex-direction: column;
+    }
+    
+    .side-nav {
+      border-radius: 8px;
+      background-color: #0ea98d;
+      box-shadow: 0 9px 94px rgba(0, 0, 0, 0.15);
+      z-index: 10;
+      display: flex;
+      min-height: 650px;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    
+    .logo {
+      aspect-ratio: 1.34;
+
+  
+      width: 79px;
+      margin-top: 11px;
+    }
+    
+    @media (max-width: 991px) {
+      .logo {
+        margin-right: 35px;
+      }
+    }
+    
+    .nav-list-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+    }
+    
+    .nav-item {
+      border-radius: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+  margin-top: 20px;
+      margin-right: 35px;
+    }
+    
+    .nav-item:first-child {
+      margin-top: 0;
+    }
+    
+    .nav-icon-wrapper {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto 0;
+    }
+    
+    .nav-icon {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto 0;
+      padding: 7px;
+    }
+    
+    .nav-icon-img {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 29px;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      color: #888;
+      margin: auto 0;
+      font: 900 16px/2 Poppins, sans-serif;
+    }
+    
+    .receitas-title {
+        text-decoration: none;
+      
+      border-radius: 30px;
+      margin-top: 40px;
+      width: 244px;
+      max-width: 100%;
+      overflow: hidden;
+      font-size: 24px;
+      color: #f8bd71;
+      line-height: 30px;
+      border: 3px solid transparent;
+      cursor: pointer;
+    }
+    
+    .form-container {
+      display: flex;
+      margin-top: 30px;
+      white-space: nowrap;
+    }
+    
+    @media (max-width: 991px) {
+      .form-container {
+        margin-left: 3px;
+        white-space: initial;
+      }
+    }
+    
+    .form-column {
+      display: flex;
+      margin-right: -240px;
+      flex-direction: column;
+      flex: 1;
+    }
+    
+    @media (max-width: 991px) {
+      .form-column {
+        white-space: initial;
+      }
+    }
+    
+    .form-input {
+      background-color: #dfdfdf;
+      overflow: hidden;
+      padding: 5px 26px 21px;
+      border: 1px solid #fff;
+    }
+    
+    @media (max-width: 991px) {
+      .form-input {
+        white-space: initial;
+        padding: 0 20px;
+      }
+    }
+    
+    .form-input-small {
+      background-color: #dfdfdf;
+      margin-top: 15px;
+      overflow: hidden;
+      padding: 9px 21px 28px;
+      border: 1px solid #fff;
+    }
+    
+    @media (max-width: 991px) {
+      .form-input-small {
+        white-space: initial;
+        padding: 0 20px;
+      }
+    }
+    
+    .form-column-right {
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    
+    @media (max-width: 991px) {
+      .form-column-right {
+        white-space: initial;
+      }
+    }
+    
+    .form-input-date {
+      background-color: #dfdfdf;
+      margin-top: 16px;
+      overflow: hidden;
+      padding: 10px 26px 23px;
+      border: 1px solid #fff;
+    }
+    
+    @media (max-width: 991px) {
+      .form-input-date {
+        margin-left: 3px;
+        padding: 0 20px;
+      }
+    }
+    
+    .form-input-category {
+      background-color: #dfdfdf;
+      margin-top: 19px;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 9px 48px 22px 21px;
+      border: 1px solid #fff;
+    }
+    
+    @media (max-width: 991px) {
+      .form-input-category {
+        margin-left: 3px;
+        white-space: initial;
+        padding: 0 20px;
+      }
+    }
+    
+    .form-input-employee {
+        background-color: #dfdfdf;
+      margin-top: 19px;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 9px 48px 22px 21px;
+      border: 1px solid #fff;
+    
+    }
+    
+    @media (max-width: 991px) {
+      .form-input-employee {
+        margin-left: 3px;
+        white-space: initial;
+        padding: 0 20px;
+      }
+    }
+    
+    .submit-button {
+        text-decoration: none;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 30px;
+      background-color: #0ea98d;
+      margin-top: 40px;
+      width: 244px;
+      max-width: 100%;
+      overflow: hidden;
+      font-size: 24px;
+      color: #f8bd71;
+      line-height: 30px;
+      padding: 19px 70px 19px 73px;
+      border: 3px solid transparent;
+      cursor: pointer;
+    }
+    
+    @media (max-width: 991px) {
+      .submit-button {
+        padding-left: 20px;
+        margin-top: 40px;
+      }
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    </style>
+    
+  
+    <section class="receitas-container">
+      <nav class="side-nav-wrapper">
+        <div class="side-nav">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f6b317a16d4acb38ced1d901a1ca9329984dad9bde04c419861be180a44ad33?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="logo" alt="Company logo" />
+          <div class="nav-list-container">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <div class="nav-icon-wrapper">
+                  <div class="nav-icon">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f38d7ac15ffa13042ba409958f9927f5883996961cafed7cdc63cc9ee59b48ea?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="nav-icon-img" alt="Navigation icon" />
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-icon-wrapper">
+                  <div class="nav-icon">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/736589b0425085ab17802dfbc7449bbf47fcbd7f2577801297ad932b0bf49beb?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="nav-icon-img" alt="Navigation icon" />
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-icon-wrapper">
+                  <div class="nav-icon">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/77deb87953cf696c9208d3d6c5faa563dd9e0d8e2a889f875f3176841a992565?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="nav-icon-img" alt="Navigation icon" />
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-icon-wrapper">
+                  <div class="nav-icon">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/98fb31438c2b7bcef12769a05d12f17f08a5d46a42a66f21d187e903e6387ffb?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="nav-icon-img" alt="Navigation icon" />
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-icon-wrapper">
+                  <div class="nav-icon">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1bc2193ebd57bed633b88fb15cfa3cd9b57441209319e01191a5f242b55e86d0?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="nav-icon-img" alt="Navigation icon" />
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-icon-wrapper">
+                  <div class="nav-icon">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/62b8a259b66388579dce83c81748f39599861ab8f5482ac6a6158c68afbb17f5?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="nav-icon-img" alt="Navigation icon" />
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-icon-wrapper">
+                  <div class="nav-icon">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/38e9eaba4e4d7b16c178d165c54acd69bca37c8d97a6140ced398cb84bc33703?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="nav-icon-img" alt="Navigation icon" />
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-icon-wrapper">
+                  <div class="nav-icon">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/af03e83125f47e45a37ad6aae46cc01eb416a6e701421f9f7699087406af4ac4?placeholderIfAbsent=true&apiKey=6d65331d59474a06ad42ad564ba99caa" class="nav-icon-img" alt="Navigation icon" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main class="main-content">
+        
+        <h1 class="receitas-title">Receitas</h1>
+        <form class="form-container">
+          
+          <div class="form-column-right">
+            <label for="descricao2" class="visually-hidden">Descrição</label>
+            <input type="text" id="descricao2" class="form-input" placeholder="Descrição" aria-label="Descrição" />
+            <label for="valor2" class="visually-hidden">Valor</label>
+            <input type="text" id="valor2" class="form-input-small" placeholder="Valor" aria-label="Valor" />
+          </div>
+        </form>
+        <label for="data-lancamento" class="visually-hidden">Data de lançamento</label>
+        <input type="date" id="data-lancamento" class="form-input-date" aria-label="Data de lançamento" />
+        <label for="categoria" class="visually-hidden">Categoria</label>
+        <select id="categoria" class="form-input-category" aria-label="Categoria">
+          <option value="">Selecione uma categoria</option>
+         <a href="desepsas.html"><option value="">Despesas</option></a>
+        </select>
+        <label for="funcionario" class="visually-hidden">Funcionário</label>
+        <select id="funcionario" class="form-input-employee" aria-label="Funcionário">
+          <option value="">Selecione um funcionário</option>
+          <option value="">Marcos</option>
+          <option value="">Jose</option>
+          <option value="">Adriano</option>
+        </select>
+        <a href="despesafinal.html" type="submit" class="submit-button"><Center>Enviar</Center></button> </a>
+      </main>
+    </section>
